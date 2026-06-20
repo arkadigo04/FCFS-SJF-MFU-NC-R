@@ -33,7 +33,7 @@ Si dispone de un entorno Linux nativo —o en su defecto, WSL configurado en sis
 
 ```bash
 # Clonar el repositorio (sustituye por el nombre real de tu repositorio si cambia)
-git clone [https://github.com/arkadigo04/practica-siso.git](https://github.com/arkadigo04/practica-siso.git)
+git clone https://github.com/arkadigo04/FCFS-SJF-MFU-NC-R.git
 
 # Acceder al directorio del código
 cd practica-siso/Script
