@@ -1,0 +1,209 @@
+
+Seleccione el tipo de ejecución: 
+	  -> Por eventos (Pulsando INTRO en cada cambio de estado) <-	
+	     Automático (A intervalos de tiempo regulares)				
+	     Completo (Todo de una vez, muestra el resumen final)				
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=0  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+Aún no ha llegado ningún proceso.
+ El primer proceso en llegar será P03 y lo hará en t=1.
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   -    -    -    -    -  Fuera del sistema  213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   -    -    -    -    -  Fuera del sistema  12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1   -    -    -    -    -  Fuera del sistema  123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10   -    -    -    -    -  Fuera del sistema  23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 0.0 Tiempo medio de retorno: 0.0
+Proceso:    NADA---------------------------------------------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |                                                  |
+ BM |--------------------------------------------------|
+    |    0                                             |
+    |   |
+ BT |---| T=0
+    |  0|
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=1  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0    0   10   0    2  En ejecución       213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   -    -    -    -    -  Fuera del sistema  12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1   -    -    -    -    -  Fuera del sistema  123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10   -    -    -    -    -  Fuera del sistema  23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 0.0 Tiempo medio de retorno: 0.0
+Proceso:    P03----------- NADA------------------------------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |P03                                               |
+ BM |333333333333333-----------------------------------|
+    |    0              3                              |
+    |     P03  |
+ BT |#####    2| T=1
+    |    0    1|
+
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=3  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0    2    8   0    2  En ejecución       213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   0    0    8   3    5  En memoria         12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1   0    0    7   6    6  En memoria         123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10   -    -    -    -    -  Fuera del sistema  23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 0.0 Tiempo medio de retorno: .666
+Proceso:    P03----------- P02----------- P04- NADA----------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |P03            P02            P04                 |
+ BM |33333333333333322222222222222244444---------------|
+    |    0              3              6    7          |
+    |     P03            |
+ BT |#####    2 2132    3| T=3
+    |    0    1         3|
+
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=5  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0    4    6   0    2  En ejecución       213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   2    2    8   3    5  En memoria         12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1   2    2    7   6    6  En memoria         123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10   0    0    -    -    -  En espera          23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 1.000 Tiempo medio de retorno: 2.000
+Proceso:    P03----------- P02----------- P04- NADA----------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |P03            P02            P04                 |
+ BM |33333333333333322222222222222244444---------------|
+    |    0              3              6    7          |
+    |     P03                      |
+ BT |#####    2 2132    3    0    0| T=5
+    |    0    1                   5|
+
+
+
+
+
+
+
+
+
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=11  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0   10    -    -    -  Finalizado         213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   8    8    8   3    5  En ejecución       12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1   8    8    7   6    6  En memoria         123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10   6    6    -    -    -  En espera          23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 5.500 Tiempo medio de retorno: 8.000
+2   2132   3   0   0   2   21   0   0   2  
+M0  M0  M0  M0  M0  M0  M0  M0  M0  M0
+M1  M1  M1  M1  M1  M1  M1  M1  M1  M1
+M2  M2  M2  M2  M2  M2  M2  M2  M2  M2
+Proceso:    -------------- P02----------- P04- NADA----------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |               P02            P04                 |
+ BM |---------------22222222222222244444---------------|
+    |    0              3              6    7          |
+    |     P03                                               P02  |
+ BT |#####    2 2132    3    0    0    2   21    0    0    2    0| T=11
+    |    0    1                                                11|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=19  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0   10    -    -    -  Finalizado         213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   8   16    -    -    -  Finalizado         12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1  16   16    7   6    6  En ejecución       123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10  14   14    -    -    -  En espera          23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 9.500 Tiempo medio de retorno: 14.000
+0   2   3   1   1   0   2   0  
+M3  M3  M3  M3  M3  M3  M3  M3
+M4  M4  M4  M4  M4  M4  M4  M4
+M5  M5  M5  M5  M5  M5  M5  M5
+Proceso:    ----------------------------- P04- NADA----------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |                              P04                 |
+ BM |------------------------------44444---------------|
+    |    0                             6    7          |
+    |     P03                                               P02                                     P04  |
+ BT |#####    2 2132    3    0    0    2   21    0    0    2    0    2    3    1    1    0    2    0    0| T=19
+    |    0    1                                                11                                      19|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ FCFS/SJF+PAG+ÓPTIMO+C+NR
+ T=26  Memoria del Sistema: 1000 direcciones	 Tamaño de Página: 100 direcciones
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado               Dirección-Página
+ P03   1  10    3   0   10    -    -    -  Finalizado         213-2 213213-2132 323-3 21-0 23-0 213-2 2123-21 21-0 23-0 213-2 
+ P02   3   8    3   8   16    -    -    -  Finalizado         12-0 213-2 321-3 123-1 123-1 23-0 232-2 23-0 
+ P04   3   7    1  16   23    -    -    -  Finalizado         123-1 23-0 43-0 123-1 213-2 123-1 213-2 
+ P01   5   7   10  21   21    7   0    9  En ejecución       23-0 1232-12 1232-12 122-1 123-1 232-2 21321-213 
+ Tiempo medio de espera: 11.250 Tiempo medio de retorno: 17.500
+1   0   0   1   2   1   2  
+M6  M6  M6  M6  M6  M6  M6
+Proceso:    P01----------------------------------------------|
+Nº Marco:   |M0   M1   M2   M3   M4   M5   M6   M7   M8   M9  |  
+Página:     |----|----|----|----|----|----|----|----|----|----|                                                                                                                                           
+Dir. Mem.:  
+Coef Optimo:|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]|[--]| 
+    |P01                                               |
+ BM |11111111111111111111111111111111111111111111111111|
+    |    0                                             |
+    |     P03                                               P02                                     P04                                P01  |
+ BT |#####    2 2132    3    0    0    2   21    0    0    2    0    2    3    1    1    0    2    0    1    0    0    1    2    1    2    0| T=26
+    |    0    1                                                11                                      19                                 26|

@@ -1,0 +1,34 @@
+# RANGOS PARA LA MEMORIA:
+# Rango mínimo para el numero de marcos de página:
+4
+# Rango máximo para el numero de marcos de página:
+7
+# Rango mínimo para el tamaño de marco de página:
+5
+# Rango máximo para el tamaño de marco de página:
+8
+# Rango mínimo para el número max de uds. para la reubicación:
+1
+# Rango máximo para el número max de uds. para la reubicación:
+1
+# RANGOS PARA LOS PROCESOS:
+# Rango mínimo para el numero de procesos:
+1
+# Rango máximo para el numero de procesos:
+1
+# Rango mínimo para el tiempo de llegada:
+1
+# Rango máximo para el tiempo de llegada:
+1
+# Rango mínimo para el tiempo de ejecución:
+1
+# Rango máximo para el tiempo de ejecución:
+1
+# Rango mínimo para el mínimo estructural:
+1
+# Rango máximo para el mínimo estructural:
+1
+# Rango mínimo para las direcciones:
+1
+# Rango máximo para las direcciones:
+1
